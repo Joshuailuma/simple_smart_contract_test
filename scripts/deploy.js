@@ -5,11 +5,8 @@ require("@nomiclabs/hardhat-etherscan");
 
 async function main() {
 
-
   const { deployer } = await getNamedAccounts()
   const chainId = network.config.chainId
-
-
 
   // Deploy TransferEth Contract
   const transferEth = await ethers.getContractFactory("TransferEth", deployer);
@@ -22,7 +19,6 @@ async function main() {
     await verify(deployedTransferEth.address, [])
     console.log("Verified")
   }
-
 }
 
 main()

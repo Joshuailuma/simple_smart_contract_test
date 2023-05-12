@@ -1,8 +1,6 @@
 const { assert, expect } = require("chai")
 const { network, deployments, ethers } = require("hardhat")
 
-
-
 describe("Unit test for transferEth contract", function () {
   // Put global constant variables here if any
   let deployer, account2, deployedTransferEth
@@ -10,7 +8,6 @@ describe("Unit test for transferEth contract", function () {
 
   beforeEach(async () => {
     const accounts = await ethers.getSigners()
-
     deployer = accounts[0]
     account2 = accounts[1]
 
@@ -19,7 +16,6 @@ describe("Unit test for transferEth contract", function () {
     deployedTransferEth = await transferEth.deploy(); // No args in the constructor
     await deployedTransferEth.deployed();
   })
-
 
   describe("sendEth", function () {
     it("sends Eth to another account", async () => {
@@ -56,7 +52,6 @@ describe("Unit test for transferEth contract", function () {
       //Check if starting bal === endingBal - amount rececived
 
       assert.equal(accountTwoInitBal.toString(), Number(accountTwoFinalBal) - etherSent)
-
     })
   })
 })

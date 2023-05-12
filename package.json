@@ -15,7 +15,6 @@
     "hardhat-deploy": ""
   },
   "dependencies": {
-    "@flashbots/ethers-provider-bundle": "^0.6.1",
     "@openzeppelin/contracts": "^4.8.2",
     "@openzeppelin/contracts-upgradeable": "^4.8.2",
     "@openzeppelin/hardhat-upgrades": "^1.22.1",

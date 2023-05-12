@@ -55,7 +55,6 @@ describe("Unit test for transferEth contract", function () {
 
       //Check if starting bal === endingBal - amount rececived
 
-      // 0. 1-1  
       assert.equal(accountTwoInitBal.toString(), Number(accountTwoFinalBal) - etherSent)
 
     })
